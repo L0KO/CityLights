@@ -1,0 +1,161 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+}
+
+a {
+  color: black;
+}
+
+main{
+  background: url('/img/homePage/mainImg.svg') no-repeat;
+  background-size: 100%;
+  background-position-y: 55px;
+}
+
+header {
+  padding: 20px 100px 0 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header__navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header__navbar ul {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.header__nav-element a {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.65);
+  min-width: 140px;
+  height: 55px;
+  text-align: center;
+  padding: 13px 24px 13px 24px;
+  font-weight: 300;
+  font-size: 24px;
+  color: #000;
+}
+
+.header__nav-enter a {
+  padding: 13px 24px 13px 67px;
+  background: url('/img/homePage/icon.svg') rgba(255, 255, 255, 0.65);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-position-x: 24px;
+}
+
+.top {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
+}
+
+.top__text {
+  font-weight: 300;
+  font-size: 36px;
+}
+
+.top__text-half {
+  margin-top: 55px;
+  grid-column: 1/2;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top__first-line {
+  margin-left: 136px;
+}
+
+.top__second-line {
+  margin-left: 240px;
+}
+
+.top__third-line {
+  margin-left: 368px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.top__image-half {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  gap: 40px;
+  padding: 26px;
+}
+
+.top__image-container {
+
+  padding: 36px 41px 46px 41px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.top__img {
+  border-radius: 10px;
+  width: 523px;
+  height: 523px;
+}
+
+.bottom {
+  padding-top: 234px;
+  margin-bottom: 120px;
+}
+
+.bottom__header-text {
+  font-weight: 300;
+  font-size: 34px;
+  line-height: 95%;
+  margin-bottom: 10px;
+}
+
+.bottom__text {
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 95%;
+}
+
+.bottom__first-text-container{
+  margin-left: 600px;
+}
+
+.bottom__second-text-container{
+  margin-top: 68px;
+  margin-left: 470px;
+}
+
+.bottom__third-text-container{
+  margin-top: 54px;
+  margin-left: 300px;
+}
+
+.bottom__text-first{
+  margin-left: 170px;
+}
+
+.bottom__text-second{
+  margin-left: 124px;
+}
+
+.bottom__text-third{
+  margin-left: 95px;
+}
+
+.nothing{
+  visibility: hidden;
+}
