@@ -7,13 +7,13 @@ a {
   color: black;
 }
 
-main{
+.main{
   background: url('/img/homePage/mainImg.svg') no-repeat;
   background-size: 100%;
   background-position-y: 55px;
 }
 
-header {
+.header {
   padding: 20px 100px 0 100px;
   display: flex;
   flex-direction: row;

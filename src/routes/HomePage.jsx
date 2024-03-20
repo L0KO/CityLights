@@ -1,10 +1,11 @@
+import '../css/SearchPage.css'
 import '../css/HomePage.css'
 
 function HomePage() {
 
   return (
     <>
-      <header>
+      <header className='header'>
         <img src="/img/homePage/logo.svg" alt="icon" />
         <nav className="header__navbar">
           <ul>
@@ -26,7 +27,7 @@ function HomePage() {
           </ul>
         </nav>
       </header>
-      <main>
+      <main className='main'>
         <div className="top">
           <div className="top__text-half">
             <p className="top__text top__first-line">Городские огни -</p>
