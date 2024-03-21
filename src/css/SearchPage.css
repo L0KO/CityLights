@@ -15,7 +15,8 @@ a {
 .header-search {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10px;
   align-items: center;
   margin-bottom: 120px;
 }
@@ -76,6 +77,7 @@ a {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 420px 226px 420px 420px;
   gap: 70px 40px;
+  margin-bottom: 70px;
 }
 
 .event-container-1 {

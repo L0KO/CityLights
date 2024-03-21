@@ -1,0 +1,124 @@
+.main-details__info-container {
+  display: flex;
+  flex-direction: row;
+  padding: 35px 30px 35px 20px;
+  background-color: white;
+  border-radius: 20px;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.main-details__info-text-conteiner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-details__info-text-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.main-details__info-text {
+  font-weight: 300;
+  font-size: 30px;
+}
+
+.bold {
+  font-weight: 500;
+}
+
+.main-details__info-main-feedback {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 128%;
+  margin-bottom: 30px;
+}
+
+.main-details__info-main-text {
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 128%;
+}
+
+.main-details__info-footer-text {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 128%;
+}
+
+.main-detail__button-row {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.main-detail__button {
+  padding: 11px 28px;
+  border-radius: 10px;
+  background-color: white;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 128%;
+}
+
+.main-detail__button:active {
+  background: #512aeb;
+  color: white;
+}
+
+.main-detail__map-container {
+  padding: 20px 40px 40px 40px;
+  border-radius: 20px;
+  background: #fff;
+  margin-bottom: 65px;
+}
+
+.main-detail__map-adress {
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 30px;
+}
+
+.main-detail__map div {
+  width: 100% !important;
+  height: 456px !important;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.main-detail__recomendation-container{
+  padding: 0 75px;
+  margin-bottom: 120px;
+}
+
+.main-detail__recomendation-header {
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px 16px;
+  width: fit-content;
+  font-weight: 300;
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+
+.main-detail__recomendation-row{
+  display: flex;
+  flex-direction: row;
+  gap: 36px;
+}
+
+.main-detail__recomendation-card{
+  padding: 15px 15px 30px 15px;
+  background-color: #fff;
+  border-radius: 20px;
+  width: 251px;
+}
+
+.main-detail__recomendation-card-bottom{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+}

@@ -1,5 +1,6 @@
 import '../css/SearchPage.css'
 import '../css/HomePage.css'
+import { Link } from 'react-router-dom'
 
 function HomePage() {
 
@@ -22,7 +23,7 @@ function HomePage() {
               <a href="">Регистрация</a>
             </li>
             <li className="header__nav-element header__nav-enter">
-              <a href="">Вход</a>
+              <Link to={'/search'}>Вход</Link>
             </li>
           </ul>
         </nav>

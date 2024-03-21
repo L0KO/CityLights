@@ -1,4 +1,5 @@
 import '../css/SearchPage.css'
+import { Link } from 'react-router-dom'
 
 function SearchPage() {
   return (
@@ -102,7 +103,9 @@ function SearchPage() {
       <main className="main-search">
         <div className="main-search__load-container">
           <div className="main-search__event-container event-container-1">
-            <img src="/img/searchPage/events/1.svg" alt="" className="main-search__event-img" />
+            <Link to={'/details'}>
+              <img src="/img/searchPage/events/1.svg" alt="" className="main-search__event-img" />
+            </Link>
             <div className='main-search__event-bottom-container'>
               <div className="main-search__text-container">
                 <p className="main-search__event-text">«Средь шумного бала»</p>
