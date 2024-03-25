@@ -1,6 +1,7 @@
 import '../css/SearchPage.css'
 import '../css/HomePage.css'
 import { Link } from 'react-router-dom'
+import Carusel from '../elements/Carusel';
 
 function HomePage() {
 
@@ -36,18 +37,7 @@ function HomePage() {
             <p className="top__text top__third-line">от тебя в одном клике</p>
           </div>
           <div className="top__image-half">
-            <div className="top__image-container">
-              <img src="/img/homePage/karusel_1.svg" alt="" className="top__img" />
-            </div>
-            <div className="top__image-container">
-              <img src="/img/homePage/karusel_2.svg" alt="" className="top__img" />
-            </div>
-            <div className="top__image-container">
-              <img src="/img/homePage/karusel_3.svg" alt="" className="top__img" />
-            </div>
-            <div className="top__image-container">
-              <img src="/img/homePage/karusel_4.svg" alt="" className="top__img" />
-            </div>
+            <Carusel/>
           </div>
         </div>
         <div className="bottom">

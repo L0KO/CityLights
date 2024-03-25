@@ -1,5 +1,5 @@
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway", sans-serif !important;
   font-optical-sizing: auto;
 }
 
@@ -7,7 +7,7 @@ a {
   color: black;
 }
 
-.main{
+.main {
   background: url('/img/homePage/mainImg.svg') no-repeat;
   background-size: 100%;
   background-position-y: 55px;
@@ -89,27 +89,70 @@ a {
 }
 
 .top__image-half {
+  position: relative;
   grid-column: 2/3;
+  padding: 26px;
+  overflow: hidden;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.top__image-overflow-container {
   display: flex;
   flex-direction: row;
   overflow: scroll;
   overflow-y: hidden;
   overflow-x: hidden;
   gap: 40px;
-  padding: 26px;
 }
 
 .top__image-container {
-
   padding: 36px 41px 46px 41px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.65);
+  width: fit-content;
 }
 
 .top__img {
   border-radius: 10px;
   width: 523px;
   height: 523px;
+}
+
+.carousel-indicators button {
+  background-color: #FFCB16 !important;
+}
+
+.carousel-control-next {
+  width: 25% !important;
+}
+
+.carousel-control-prev {
+  width: 25% !important;
+}
+
+.top__button-left {
+  position: absolute;
+  opacity: 50%;
+  border-radius: 50%;
+  left: 12%;
+  top: 43%;
+  z-index: 3;
+  cursor: pointer;
+  transform: rotate(180deg);
+  visibility: hidden;
+}
+
+.top__button-right {
+  position: absolute;
+  opacity: 50%;
+  border-radius: 50%;
+  right: 25%;
+  top: 43%;
+  z-index: 3;
+  cursor: pointer;
 }
 
 .bottom {
@@ -121,7 +164,7 @@ a {
   font-weight: 300;
   font-size: 34px;
   line-height: 95%;
-  margin-bottom: 10px;
+  margin-bottom: 11px !important;
 }
 
 .bottom__text {
@@ -130,32 +173,32 @@ a {
   line-height: 95%;
 }
 
-.bottom__first-text-container{
+.bottom__first-text-container {
   margin-left: 600px;
 }
 
-.bottom__second-text-container{
+.bottom__second-text-container {
   margin-top: 68px;
   margin-left: 470px;
 }
 
-.bottom__third-text-container{
+.bottom__third-text-container {
   margin-top: 54px;
   margin-left: 300px;
 }
 
-.bottom__text-first{
+.bottom__text-first {
   margin-left: 170px;
 }
 
-.bottom__text-second{
+.bottom__text-second {
   margin-left: 124px;
 }
 
-.bottom__text-third{
+.bottom__text-third {
   margin-left: 95px;
 }
 
-.nothing{
+.nothing {
   visibility: hidden;
 }

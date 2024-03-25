@@ -12,6 +12,12 @@ a {
   background: #EBEAF0 url('/img/searchPage/background.svg') 0 45px fixed;
 }
 
+.main-search{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .header-search {
   display: flex;
   flex-direction: row;
@@ -75,7 +81,8 @@ a {
 .main-search__load-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: 420px 226px 420px 420px;
+  /* grid-template-rows: 420px 226px 420px 420px; */
+  grid-template-rows: 1fr 0.5fr 1fr 1fr;
   gap: 70px 40px;
   margin-bottom: 70px;
 }
@@ -101,13 +108,15 @@ a {
 }
 
 .main-search__event-container {
-  padding: 15px 15px 45px 15px;
+  padding: 15px;
   background-color: white;
   border-radius: 20px;
 }
 
 .main-search__event-container_big {
   padding: 25px 42px 15px 42px;
+  background-color: white;
+  border-radius: 20px;
 }
 
 .main-search__event-img {

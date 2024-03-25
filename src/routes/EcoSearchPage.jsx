@@ -1,14 +1,21 @@
-import '../css/DetailsPage.css'
-import { YMaps, Map } from '@pbe/react-yandex-maps';
-import { Link } from 'react-router-dom';
+import { useState } from 'react'
+import { Link } from 'react-router-dom'
+import '../css/EcoSearchPage.css'
+import EcoLoadContainer from '../elements/EcoLoadContainer'
 
-function DetailsPage() {
+function EcoSearchPage() {
+
+  const [content, setContent] = useState([<EcoLoadContainer key={0} />])
+
+  function getMoreContent() {
+    setContent(content.concat(<EcoLoadContainer key={content.length} />))
+  }
 
   return (
-    <div className="wrapper">
+    <div className="eco-wrapper">
       <header className='header-search'>
-        <div className="header-search__city header-search__component"><img src="/img/searchPage/icons/map_icon.png" alt="" />Таганрог</div>
-        <div className="header-search__settings header-search__component"><img src="/img/searchPage/icons/settings_icon.svg" alt="" /></div>
+        <div className="header-search__city header-search__component"><img src="/img/eco/icons/map_icon_eco.png" alt="" />Таганрог</div>
+        <div className="header-search__settings header-search__component"><img src="/img/eco/icons/settings_icon_eco.svg" alt="" /></div>
         <div className="header-search__search header-search__component">
           <svg width="32" height="30" viewBox="0 0 32 30" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g opacity="0.5">
@@ -16,20 +23,20 @@ function DetailsPage() {
             </g>
           </svg>
           Поиск мероприятий
-          <div className="header-search__search-button">Найти</div>
+          <div className="header-search__search-button_eco">Найти</div>
         </div>
         <div className="header-search__calendar header-search__component">
           <img src="/img/searchPage/icons/calendar_icon.svg" alt="" />
         </div>
         <div className="header-search__eco header-search__component">
-          <Link to={'/eco'}>
+          <Link to={'/search'}>
             <svg width="76" height="77" viewBox="0 0 76 77" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13 34C13 24.5719 13 19.8579 15.9289 16.9289C18.8579 14 23.5719 14 33 14H44C53.4281 14 58.1421 14 61.0711 16.9289C64 19.8579 64 24.5719 64 34V48C64 57.4281 64 62.1421 61.0711 65.0711C58.1421 68 53.4281 68 44 68H33C23.5719 68 18.8579 68 15.9289 65.0711C13 62.1421 13 57.4281 13 48V34Z" fill="white" />
-              <g clip-path="url(#clip0_531_159)">
+              <g clipPath="url(#clip0_531_159)">
                 <rect width="40" height="40" transform="translate(18 23)" fill="white" />
                 <path d="M28.4167 36.4167C23.8667 40.9667 23.8667 48.3334 28.3833 52.8834C30.8333 47.2167 35.2 42.4834 40.65 39.6667C36.0333 43.5667 32.8 49.0167 31.6667 55.2C36 57.25 41.3333 56.5 44.9167 52.9167C50.7167 47.1167 51.6667 29.6667 51.6667 29.6667C51.6667 29.6667 34.2167 30.6167 28.4167 36.4167Z" fill="#1D7307" />
               </g>
-              <g clip-path="url(#clip1_531_159)">
+              <g clipPath="url(#clip1_531_159)">
                 <path d="M62.0177 71.6158C60.8256 70.4824 60.8256 68.6473 62.009 67.5138C62.6509 68.9254 63.7949 70.1046 65.2228 70.8062C64.0133 69.8347 63.1661 68.477 62.8692 66.9367C64.0045 66.426 65.4018 66.6129 66.3407 67.5055C67.8602 68.9503 68.1091 73.2973 68.1091 73.2973C68.1091 73.2973 63.5373 73.0606 62.0177 71.6158Z" fill="#406017" />
                 <path d="M59.0291 13.2972C60.0385 12.5486 60.286 11.1716 59.5885 10.22C58.9369 11.2244 57.9558 12.0114 56.8352 12.4159C57.8353 11.7902 58.6271 10.8439 59.0482 9.71343C58.3012 9.23325 57.272 9.25407 56.477 9.84368C55.1902 10.798 54.4252 14.0386 54.4252 14.0386C54.4252 14.0386 57.7423 14.2516 59.0291 13.2972Z" fill="#406017" />
                 <path d="M52.4712 4.68032C51.7246 5.92821 52.1943 7.65818 53.5135 8.54863C53.7105 7.12129 54.4036 5.83757 55.4658 4.96125C54.6625 6.05913 54.2733 7.46647 54.4094 8.96323C55.5274 9.27381 56.6948 8.88742 57.2827 7.90465C58.2344 6.31393 57.3383 2.17856 57.3383 2.17856C57.3383 2.17856 53.4229 3.0896 52.4712 4.68032Z" fill="#406017" />
@@ -104,90 +111,13 @@ function DetailsPage() {
           Избранное
         </div>
       </header>
-      <main className="main-details">
-        <div className="main-details__info-container">
-          <img src="/img/searchPage/events/4.svg" alt="" className="main-details__info-img" />
-          <div className="main-details__info-text-conteiner">
-            <div className="main-details__info-text-header">
-              <div>
-                <p className="main-details__info-text">Концерт</p>
-                <p className="main-details__info-text"><span className="bold">Курентзис: Моцарт</span></p>
-              </div>
-              <img src="/img/searchPage/icons/favorite_icon.svg" alt="" className="main-details__favorite-icon" />
-            </div>
-            <div className="main-details__info-main-container">
-              <p className="main-details__info-text main-details__info-main-feedback">«Это был волнующий концерт» (Süddeutsche Zeitung)</p>
-              <p className="main-details__info-text main-details__info-main-text">Концерты греко-российского дирижёра Теодора Курентзиса и его оркестра musicAeterna нередко больше напоминают перформанс и священнодействие, чем просто блестящую интерпретацию музыки, и неизменно становятся яркими событиями в музыкальной жизни.</p>
-            </div>
-            <div className="main-details__info-footer-container">
-              <p className="main-details__info-footer-text">Хронометраж: 83 мин.</p>
-              <p className="main-details__info-footer-text">Страна: Австрия</p>
-              <p className="main-details__info-footer-text">Год: 2021</p>
-            </div>
-          </div>
-        </div>
-        <div className="main-detail__button-row">
-          <button className="main-detail__button">Буду</button>
-          <button className="main-detail__button">Перейти к источнику</button>
-          <button className="main-detail__button">Пожаловаться</button>
-        </div>
-        <div className="main-detail__map-container">
-          <p className="main-detail__map-adress">Адрес: <span>пл Мира, 7, Таганрог, Ростовская обл</span></p>
-          <YMaps>
-            <div className='main-detail__map'>
-              <Map defaultState={{ center: [47.217482, 38.898857], zoom: 15 }} />
-            </div>
-          </YMaps>
-        </div>
-        <div className="main-detail__recomendation-container">
-          <div className="main-detail__recomendation-header">Рекомендации</div>
-          <div className="main-detail__recomendation-row">
-            <div className="main-detail__recomendation-card">
-              <img src="/img/searchPage/events/11.svg" alt="" className="main-detail__recomendation-img" />
-              <div className="main-detail__recomendation-card-bottom">
-                <div>
-                  <p className="main-detail__recomendation-text">«Мир акварели»</p>
-                  <p className="main-detail__recomendation-text">19 июня - 16 июля</p>
-                </div>
-                <img src="/img/searchPage/icons/favorite_icon.svg" alt="" className="main-details__favorite-icon" />
-              </div>
-            </div>
-            <div className="main-detail__recomendation-card">
-              <img src="/img/searchPage/events/12.svg" alt="" className="main-detail__recomendation-img" />
-              <div className="main-detail__recomendation-card-bottom">
-                <div>
-                  <p className="main-detail__recomendation-text">«Роден»</p>
-                  <p className="main-detail__recomendation-text">24 мая в 19:00</p>
-                </div>
-                <img src="/img/searchPage/icons/favorite_icon.svg" alt="" className="main-details__favorite-icon" />
-              </div>
-            </div>
-            <div className="main-detail__recomendation-card">
-              <img src="/img/searchPage/events/13.svg" alt="" className="main-detail__recomendation-img" />
-              <div className="main-detail__recomendation-card-bottom">
-                <div>
-                  <p className="main-detail__recomendation-text">Концерт «Любимая музыка кино»</p>
-                  <p className="main-detail__recomendation-text">18 июня в 16:00</p>
-                </div>
-                <img src="/img/searchPage/icons/favorite_icon.svg" alt="" className="main-details__favorite-icon" />
-              </div>
-            </div>
-            <div className="main-detail__recomendation-card">
-              <img src="/img/searchPage/events/14.svg" alt="" className="main-detail__recomendation-img" />
-              <div className="main-detail__recomendation-card-bottom">
-                <div>
-                  <p className="main-detail__recomendation-text">Концерт «Богатыри эпохи славной»</p>
-                  <p className="main-detail__recomendation-text">12 июня в 16:00</p>
-                </div>
-                <img src="/img/searchPage/icons/favorite_icon.svg" alt="" className="main-details__favorite-icon" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="nothing">V.Sol</div>
+      <main className="main-search">
+        {content}
+        <button onClick={getMoreContent} className="main__more-botton_eco">Показать ещё</button>
+        <div className="nothingh">V Sol</div>
       </main>
     </div>
   )
 }
 
-export default DetailsPage
+export default EcoSearchPage

@@ -1,0 +1,27 @@
+
+.eco-wrapper {
+  padding: 45px 100px 0 100px;
+  background: #EBEAF0 url('/img/eco/ecoBackground.svg');
+}
+
+.header-search__search-button_eco{
+  background-color: #3F842C;
+  border-radius: 5px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  margin-left: 250px;
+}
+
+.main__more-botton_eco{
+  margin-top: 90px;
+  padding: 14px 77px;
+  color: white;
+  background-color: #3F842C;
+  border-radius: 20px;
+  text-align: center;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 100px;
+}

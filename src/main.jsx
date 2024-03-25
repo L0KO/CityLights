@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import HomePage from './routes/HomePage';
 import SearchPage from './routes/SearchPage';
+import EcoSearchPage from './routes/EcoSearchPage';
 import DetailsPage from './routes/DetailsPage';
 
 const router = createBrowserRouter([
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/search",
     element: <SearchPage />
+  },
+  {
+    path: "/eco",
+    element: <EcoSearchPage />
   },
   {
     path: "/details",
