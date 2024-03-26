@@ -37,7 +37,9 @@ function HomePage() {
             <p className="top__text top__third-line">от тебя в одном клике</p>
           </div>
           <div className="top__image-half">
-            <Carusel/>
+            <div className="top__carusel-container">
+              <Carusel />
+            </div>
           </div>
         </div>
         <div className="bottom">

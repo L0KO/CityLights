@@ -122,3 +122,15 @@
   justify-content: space-between;
   margin-top: 8px;
 }
+
+.carousel-control-next{
+  width: 15% !important;
+}
+
+.carousel-control-prev{
+  width: 15% !important;
+}
+
+.main-details__info-img{
+  margin: 0 20px;
+}

@@ -1,6 +1,7 @@
 import '../css/DetailsPage.css'
 import { YMaps, Map } from '@pbe/react-yandex-maps';
 import { Link } from 'react-router-dom';
+import DetailsCarusel from '../elements/DetailsCarusel';
 
 function DetailsPage() {
 
@@ -106,7 +107,7 @@ function DetailsPage() {
       </header>
       <main className="main-details">
         <div className="main-details__info-container">
-          <img src="/img/searchPage/events/4.svg" alt="" className="main-details__info-img" />
+          <DetailsCarusel/>
           <div className="main-details__info-text-conteiner">
             <div className="main-details__info-text-header">
               <div>
